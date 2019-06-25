@@ -6,4 +6,6 @@
 
 偶に解説します。
 
-
+## 連絡先
+twitter @TT_beginner
+E-mail:trttkm[at]icloud.com
