@@ -8,7 +8,7 @@
 
 つまり、変数(x,y)は、1辺が1/nの正方形のブロックの右上の座標を示している(下図)。<br>
 
-![circle](circle.png "circle")
+![circle](https://github.com/honehaniwa/kakomon_test/blob/master/kyoto_kogeiH31/circle.png "circle")
 
 つまり、この(x,y)が円周を超えた場合、このブロックの一部は円の面積から外れることになる。<br>
 
