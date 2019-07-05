@@ -6,9 +6,14 @@
 
 偶に解説します。
 
+## 解説＆解答ページ
+[京都工芸繊維大学H31年](https://honehaniwa.github.io/kakomon_test/kyoto_kogeiH31/explanation)
+[筑波大学H25年](https://honehaniwa.github.io/kakomon_test/tsukubaH25/explanation)
+[筑波大学HXX年](https://honehaniwa.github.io/kakomon_test/tsukubaHxx/explanation)
+
 ## 実行方法
 
-大体がc++で書かれています。<br>
+大体がc++で書かれています。(:追記 うそです。大体Cで書いてます。)<br>
 
 なのでgccではコンパイルは通りません。<br>
 
