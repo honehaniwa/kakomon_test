@@ -49,3 +49,72 @@ count(1辺1/nの正方形の個数) * (1/n)^2(正方形のブロックの面積)
    結果は同じになりますが実行時間に差が出るのでよかったら遊んでみてください。
 
 ```
+
+## ソースコード
+[2-1(問題に書いてあるほう)](https://github.com/honehaniwa/kakomon_test/blob/master/kyoto_kogeiH31/h31_2-1.cpp) <br>
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	long long n;
+	cin >> n;
+    	long long count =0;
+	for(int i=0;i<n;i++){
+      		double x=(double)i/(double)n;
+      		for(int j=0;j<n;j++){
+       			double y=(double)j/(double)n;
+        		if(sqrt(x*x+y*y) <= 1.0) count++;
+        		//cout<<x<<" "<<y<<" "<<count<<endl;
+      		}
+    	}
+	cout << fixed << setprecision(10) << 4.0*(double)count/((double)n*(double)n) << endl;
+	return 0;
+}
+```
+[2-2(二分探索で書き直した方)](https://github.com/honehaniwa/kakomon_test/blob/master/kyoto_kogeiH31/h31_2-2.cpp)<br>
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int n;
+
+bool isOK(int mid, double key) {
+	double y = (double)mid / (double)n;
+	//cout << sqrt(key + y * y) << " ";
+	if (sqrt(key + (y * y)) <= 1) return true;
+	else return false;
+}
+
+int binary_search(double key) {
+	int ng = -1;
+	int ok = n;
+
+	while (abs(ok - ng) > 1) {
+		int mid = (ok + ng) / 2;
+		//for debug
+		//cout << mid << " " << key << endl;
+		if (!isOK(mid, key)) ok = mid;
+		else ng = mid;
+	}
+	
+	return ok;
+}
+
+
+
+int main() {
+	long long count = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		double x = (double)i / (double)n;
+		double xx = x * x;
+		count += binary_search(xx);
+	}
+	//for debug
+	//cout << count << endl;
+	cout << fixed << setprecision(10) << 4.0*(double)count / ((double)n*(double)n) << endl;
+	return 0;
+}
+```
+
