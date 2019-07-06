@@ -115,8 +115,8 @@ else if(i < k) return select(a, p, q-1, i);
 が毎回実行され、q-1が0になるまで再起される。 <br>
 つまり、最大比較回数はn+(n-1)+(n-2)+...+1となる。 <br>
 つまり、最大比較回数はn*(n+1)/2となる。<br>
-[1~nの総和がn*(n+1)/2になる証明](https://mathwords.net/1karannowa)
-![1toN](https://mathwords.net/wp-content/uploads/2017/02/1karannowa2-277x300.png "1toN")
+[1~nの総和がn*(n+1)/2になる証明](https://mathwords.net/1karannowa) <br>
+![1toN](https://mathwords.net/wp-content/uploads/2017/02/1karannowa2-277x300.png "1toN") <br>
 
 ### 問題5
 
